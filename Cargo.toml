@@ -1,0 +1,21 @@
+[package]
+name = "actix_mongo_test"
+version = "0.1.1"
+authors = ["Dmitry Sobolev <ds@napoleonit.ru>"]
+edition = "2018"
+
+[dependencies]
+actix = "0.7.9"
+actix-web = "^0.7.18"
+bson = "0.11"
+futures = "^0.1.25"
+mongo_driver = "0.12.1"
+env_logger = "^0.6.1"
+log = "0.4.6"
+config = "0.9.3"
+serde = { version = "^1.0", features = ["derive"] }
+
+
+[profile.release]
+opt-level = 3
+lto = true
